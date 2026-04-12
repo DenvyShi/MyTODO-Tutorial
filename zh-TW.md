@@ -4,6 +4,16 @@
 
 ---
 
+## 📸 看起來是什麼樣子
+
+**登入頁面：**
+![MyTODO 登入頁面](./screenshots/login.png)
+
+**任務管理儀表板：**
+![MyTODO 儀表板](./screenshots/dashboard.png)
+
+---
+
 ## 🎯 這篇文章的真正重點
 
 這**不是**一篇教你做待辦事項 App 的教程。那種教程網路上有上千篇。
