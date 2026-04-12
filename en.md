@@ -171,6 +171,140 @@ test('should create a new task', async () => {
 
 ---
 
+## 🖥️ Development Environment
+
+This entire project was built through conversations with an **AI assistant** running on [OpenClaw](https://github.com/openclaw/openclaw). Here's exactly what the setup looked like:
+
+| Component | Details |
+|---|---|
+| **Host OS** | Windows 11 + WSL2 (Ubuntu 24.04) |
+| **AI Platform** | OpenClaw 2026.3.28 → 2026.4.10 |
+| **AI Model** | GLM-4 (via z.ai) + local Gemma models |
+| **Communication** | Telegram (chatting with the AI to write code) |
+| **Editor** | None — all code was written by the AI assistant |
+| **Deployment Target** | AppServer WSL (Ubuntu, IP: 172.31.254.165) |
+| **Public Domain** | `first.pet` (via Cloudflare Tunnel) |
+
+**What does this mean?** I didn't open VS Code or any IDE. I described what I wanted in plain language through Telegram, and the AI wrote, tested, and deployed the code for me. If you can describe what you want, you can build it too.
+
+---
+
+## 💬 The Prompts I Used (Step-by-Step Reproduction Guide)
+
+Here are the actual prompts I sent to my AI assistant to build MyTODO from zero to production. You can follow these exact prompts with any capable AI coding assistant to reproduce the project.
+
+### Phase 1: Foundation
+
+**Prompt 1 — Initial Request:**
+> I want to build a to-do list web application similar to Microsoft To Do. The tech stack should be:
+> - Backend: Node.js + Express + SQLite + JWT authentication
+> - Frontend: React + Vite + Tailwind CSS
+> - Notifications: Telegram Bot + Email (Nodemailer)
+> 
+> Features needed:
+> - User registration and login
+> - Multiple task lists (e.g., Work, Personal, Shopping)
+> - Task CRUD with title, description, priority (high/medium/low), due date/time
+> - Drag and drop sorting
+> - Telegram and email reminders when tasks are due
+> 
+> Create the project structure and implement the backend first.
+
+**Prompt 2 — Frontend Setup:**
+> Now create the React frontend with:
+> - A modern login/register page
+> - A dashboard with a sidebar showing all lists
+> - Task cards that can be dragged between lists
+> - A modal for creating/editing tasks with all fields
+> - Tailwind CSS for styling, dark theme by default
+
+**Prompt 3 — Connect Frontend to Backend:**
+> Create the API layer in the frontend to connect to the backend:
+> - Auth API (login, register, token management)
+> - Lists API (CRUD for lists)
+> - Tasks API (CRUD for tasks)
+> - Handle JWT tokens in localStorage
+> - Error handling and loading states
+
+### Phase 2: Polish & Features
+
+**Prompt 4 — UI Enhancements:**
+> Add these UI improvements:
+> - Sidebar should be collapsible (toggle button)
+> - Each list gets a random colorful icon (30 unique options)
+> - Add "All Tasks" view showing tasks from all lists
+> - Add "Today" filter showing tasks due today
+> - Add "Completed" section for finished tasks
+> - Dragging a task to a different list should change its list_id
+
+**Prompt 5 — Multi-language Support:**
+> Add internationalization (i18n) to the app:
+> - Support English and Traditional Chinese (zh-TW)
+> - Add a language toggle in the settings
+> - Create locale files for all UI text
+
+### Phase 3: Testing & Quality
+
+**Prompt 6 — Automated Testing:**
+> Write comprehensive tests for the backend:
+> - Test all auth routes (register, login, invalid credentials)
+> - Test all CRUD operations for lists and tasks
+> - Test authorization (users can only access their own data)
+> - Test edge cases (empty fields, duplicate names, invalid IDs)
+> - Use Jest + Supertest
+> - Target 90%+ code coverage
+
+### Phase 4: Deployment
+
+**Prompt 7 — Deployment Script:**
+> Create a deployment script that:
+> - Installs all dependencies (npm install for both client and server)
+> - Builds the React frontend for production
+> - Creates a systemd service file so the app starts on boot
+> - The server should serve the built frontend in production mode
+> - Use port 3001
+
+**Prompt 8 — Cloudflare Tunnel:**
+> Help me set up a Cloudflare Tunnel to make the app publicly accessible:
+> - I have the domain `first.pet` on Cloudflare
+> - I want the subdomain `mytodo.first.pet`
+> - Set up a named tunnel (not quick tunnel)
+> - Create a systemd service for the tunnel so it auto-starts
+
+### Phase 5: Iteration
+
+**Prompt 9 — Bug Fixes & Tweaks:**
+> Fix these issues:
+> - When a task is moved to another list via drag-and-drop, it should disappear from the old list immediately (not on refresh)
+> - The task count in each list should update in real-time
+> - Add a confirmation dialog before deleting a list
+
+### 🔄 Prompt Writing Tips
+
+Based on my experience, here's what makes a good prompt for building software:
+
+1. **Be specific about the tech stack** — Don't say "make a web app." Say "use React + Express + SQLite."
+2. **Define features clearly** — List them out as bullet points
+3. **Build in phases** — Don't ask for everything at once. Backend → Frontend → Integration → Polish → Deploy.
+4. **Iterate** — After seeing the result, refine. "Fix this bug" or "Add this feature" is perfectly valid.
+5. **Test as you go** — Ask the AI to write tests early. It catches bugs before they become problems.
+
+---
+
+## 🤖 What the AI Actually Did
+
+For each prompt, the AI assistant:
+1. Created the necessary files and wrote all the code
+2. Ran `npm install` to install dependencies
+3. Executed the tests and reported coverage
+4. Deployed to the server via SSH
+5. Set up systemd services for 24/7 uptime
+6. Configured Cloudflare Tunnel for public access
+
+**I never opened a code editor. I never typed a single line of code.** I just described what I wanted, and the AI made it happen.
+
+---
+
 ## 🌐 How I Deployed It to the Internet
 
 ### The Problem
