@@ -1,0 +1,70 @@
+{
+  "app": {
+    "title": "MyTODO",
+    "subtitle": "Login to manage your tasks"
+  },
+  "login": {
+    "title": "Login",
+    "username": "Username",
+    "password": "Password",
+    "usernamePlaceholder": "Enter username",
+    "passwordPlaceholder": "Enter password",
+    "loginButton": "Login",
+    "loggingIn": "Logging in..."
+  },
+  "dashboard": {
+    "allTasks": "All Tasks",
+    "today": "Today",
+    "completed": "Completed",
+    "lists": "Lists",
+    "newList": "New List",
+    "newTask": "Add Task",
+    "noTask": "No tasks yet",
+    "noTaskToday": "No tasks due today",
+    "noTaskCompleted": "No completed tasks",
+    "noTaskAll": "No tasks in any list",
+    "addFirstTask": "Add your first task",
+    "selectList": "Select a list or create a new one"
+  },
+  "task": {
+    "title": "Title",
+    "description": "Description",
+    "dueDate": "Due Date",
+    "dueTime": "Time",
+    "priority": "Priority",
+    "priorityHigh": "High",
+    "priorityMedium": "Medium",
+    "priorityLow": "Low",
+    "reminder": "Reminder (minutes before)",
+    "reminderPlaceholder": "e.g., 30",
+    "list": "List",
+    "save": "Save",
+    "saving": "Saving...",
+    "cancel": "Cancel",
+    "addTask": "Add Task",
+    "editTask": "Edit Task",
+    "deleteConfirm": "Are you sure you want to delete this task?",
+    "deleteConfirmList": "Are you sure you want to delete this list? All tasks will be deleted.",
+    "reminderBefore": "minutes before reminder"
+  },
+  "priority": {
+    "high": "High",
+    "medium": "Medium",
+    "low": "Low"
+  },
+  "menu": {
+    "logout": "Logout",
+    "settings": "Settings",
+    "language": "Language",
+    "theme": "Theme",
+    "dark": "Dark",
+    "light": "Light"
+  },
+  "common": {
+    "delete": "Delete",
+    "edit": "Edit",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "loading": "Loading..."
+  }
+}
