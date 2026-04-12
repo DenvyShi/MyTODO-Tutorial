@@ -4,6 +4,16 @@
 
 ---
 
+## 📸 What It Looks Like
+
+**Login Page:**
+![MyTODO Login Page](./screenshots/login.png)
+
+**Dashboard with Tasks:**
+![MyTODO Dashboard](./screenshots/dashboard.png)
+
+---
+
 ## 🎯 The Real Point of This Article
 
 This is **not** a tutorial about building a to-do list app. There are thousands of those.
