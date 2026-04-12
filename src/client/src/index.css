@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Dark Theme (default) */
+.dark-theme {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-tertiary: #334155;
+  --text-primary: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --border-color: #475569;
+  --hover-bg: #334155;
+}
+
+/* Light Theme */
+.light-theme {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f1f5f9;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --border-color: #e2e8f0;
+  --hover-bg: #f1f5f9;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+/* Theme-specific styles */
+.dark-theme {
+  background-color: #0f172a;
+  color: #e2e8f0;
+}
+
+.light-theme {
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* Light theme adjustments for Tailwind classes */
+.light-theme .bg-slate-800 {
+  background-color: #ffffff !important;
+  border: 1px solid #e2e8f0;
+}
+
+.light-theme .bg-slate-700 {
+  background-color: #f8fafc !important;
+}
+
+.light-theme .bg-slate-700\/50 {
+  background-color: rgba(248, 250, 252, 0.5) !important;
+}
+
+.light-theme .text-slate-400 {
+  color: #64748b !important;
+}
+
+.light-theme .text-slate-300 {
+  color: #475569 !important;
+}
+
+.light-theme .border-slate-700 {
+  border-color: #e2e8f0 !important;
+}
+
+.light-theme .border-slate-600 {
+  border-color: #cbd5e1 !important;
+}
