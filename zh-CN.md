@@ -4,6 +4,16 @@
 
 ---
 
+## 📸 看起来是什么样子
+
+**登录页面：**
+![MyTODO 登录页面](./screenshots/login.png)
+
+**任务管理仪表板：**
+![MyTODO 仪表板](./screenshots/dashboard.png)
+
+---
+
 ## 🎯 这篇文章的真正重点
 
 这**不是**一篇教你做待办事项 App 的教程。那种教程网上有上千篇。
