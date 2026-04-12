@@ -1,6 +1,6 @@
-# 📝 MyTODO Tutorial — Build Your Own To-Do App from Scratch
+# 🤖 How I Built an Entire Web App by Talking to AI
 
-A beginner-friendly guide to building a full-stack task management web application.
+A tutorial on **AI-assisted software development** — not just a to-do app tutorial. Learn the process, prompts, and principles of building production-quality software through conversation with AI.
 
 ## 📖 Read the Article
 
@@ -10,26 +10,34 @@ A beginner-friendly guide to building a full-stack task management web applicati
 | 🇹🇼 繁體中文 | [zh-TW.md](./zh-TW.md) |
 | 🇨🇳 简体中文 | [zh-CN.md](./zh-CN.md) |
 
-## 🛠️ What You'll Learn
-
-- How modern web apps work (Client-Server architecture)
-- Frontend development with React + Vite + Tailwind CSS
-- Backend development with Node.js + Express + SQLite
-- User authentication with JWT
-- Drag & drop functionality with @dnd-kit
-- Smart notifications via Telegram & Email
-- Deploying to the internet with Cloudflare Tunnel (free!)
-- Writing automated tests with 94%+ coverage
-
-## 🚀 Live Demo
-
-The app is live at: https://mytodo.first.pet/
-
 ## 📦 Source Code
 
-The full source code for the MyTODO application is available at:
-[https://github.com/Denvy-Shi/MyTODO](https://github.com/Denvy-Shi/MyTODO)
+The complete source code for the MyTODO application is in the [`src/`](./src/) directory.
+
+## 🎯 What You'll Learn
+
+- How to structure prompts for AI-assisted coding
+- The phased approach: Foundation → Features → Polish → Test → Deploy → Iterate
+- How to go from zero to production without writing any code yourself
+- The 7 principles of effective AI-assisted software development
+- Real prompts you can adapt for your own projects
+
+## 🛠️ Tech Stack Used
+
+| Layer | Technology |
+|-------|-----------|
+| Frontend | React + Vite + Tailwind CSS + @dnd-kit |
+| Backend | Node.js + Express + SQLite |
+| Auth | JWT |
+| Notifications | Telegram Bot + Email (Nodemailer) |
+| Deployment | Systemd + Cloudflare Tunnel |
+| AI Assistant | OpenClaw + GLM-4 |
+
+## 🔗 Links
+
+- **Live App**: https://mytodo.first.pet/
+- **AI Platform**: [OpenClaw](https://github.com/openclaw/openclaw)
 
 ---
 
-*Built with ❤️ by [Denvy Shi](https://github.com/Denvy-Shi)*
+*Built entirely through AI conversation by [Denvy Shi](https://github.com/Denvy-Shi)*
