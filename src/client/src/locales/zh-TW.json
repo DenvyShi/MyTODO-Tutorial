@@ -1,0 +1,70 @@
+{
+  "app": {
+    "title": "MyTODO",
+    "subtitle": "登入以管理你的任務"
+  },
+  "login": {
+    "title": "登入",
+    "username": "帳號",
+    "password": "密碼",
+    "usernamePlaceholder": "輸入帳號",
+    "passwordPlaceholder": "輸入密碼",
+    "loginButton": "登入",
+    "loggingIn": "登入中..."
+  },
+  "dashboard": {
+    "allTasks": "全部任務",
+    "today": "今天",
+    "completed": "已完成",
+    "lists": "清單",
+    "newList": "新增清單",
+    "newTask": "新增任務",
+    "noTask": "這個清單還沒有任務",
+    "noTaskToday": "今天沒有任務",
+    "noTaskCompleted": "沒有已完成的任務",
+    "noTaskAll": "還沒有任何任務",
+    "addFirstTask": "新增第一個任務",
+    "selectList": "請從左側選擇一個清單，或建立新清單開始使用"
+  },
+  "task": {
+    "title": "標題",
+    "description": "描述",
+    "dueDate": "截止日期",
+    "dueTime": "時間",
+    "priority": "優先級",
+    "priorityHigh": "高",
+    "priorityMedium": "中",
+    "priorityLow": "低",
+    "reminder": "提醒（截止前幾分鐘）",
+    "reminderPlaceholder": "例如：30",
+    "list": "清單",
+    "save": "儲存",
+    "saving": "儲存中...",
+    "cancel": "取消",
+    "addTask": "新增任務",
+    "editTask": "編輯任務",
+    "deleteConfirm": "確定要刪除這個任務嗎？",
+    "deleteConfirmList": "確定要刪除這個清單嗎？所有任務也會被刪除。",
+    "reminderBefore": "分鐘前提醒"
+  },
+  "priority": {
+    "high": "高",
+    "medium": "中",
+    "low": "低"
+  },
+  "menu": {
+    "logout": "登出",
+    "settings": "設定",
+    "language": "語言",
+    "theme": "主題",
+    "dark": "深色",
+    "light": "淺色"
+  },
+  "common": {
+    "delete": "刪除",
+    "edit": "編輯",
+    "cancel": "取消",
+    "confirm": "確定",
+    "loading": "載入中..."
+  }
+}
