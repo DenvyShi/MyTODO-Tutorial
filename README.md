@@ -35,7 +35,7 @@ The complete source code for the MyTODO application is in the [`src/`](./src/) d
 
 ## 🔗 Links
 
-- **Live App**: https://mytodo.first.pet/
+- **Live App**: https://mytodo-tutorial.first.pet/
 - **AI Platform**: [OpenClaw](https://github.com/openclaw/openclaw)
 
 ---

@@ -157,14 +157,14 @@ Here are the actual prompts I sent to build MyTODO, organized by phase. Each pro
 **Prompt 8 — Public Access:**
 > Help me set up a Cloudflare Tunnel to make the app publicly accessible:
 > - I have the domain `first.pet` on Cloudflare
-> - I want the subdomain `mytodo.first.pet`
+> - I want the subdomain `mytodo-tutorial.first.pet`
 > - Set up a named tunnel (not quick tunnel)
 > - Create a systemd service for the tunnel so it auto-starts
 
 **Deployment architecture:**
 ```
 Any Device ──▶ Cloudflare CDN (HTTPS) ──▶ Tunnel ──▶ My Home Server
-               mytodo.first.pet                       (port 3001)
+               mytodo-tutorial.first.pet                      (port 3002)
 ```
 
 ---
