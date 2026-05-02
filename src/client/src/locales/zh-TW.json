@@ -10,7 +10,9 @@
     "usernamePlaceholder": "輸入帳號",
     "passwordPlaceholder": "輸入密碼",
     "loginButton": "登入",
-    "loggingIn": "登入中..."
+    "loggingIn": "登入中...",
+    "demoHint": "🚀 快速體驗 — 使用示範帳號",
+    "demoNote": "已自動填入，直接點擊登入即可體驗"
   },
   "dashboard": {
     "allTasks": "全部任務",

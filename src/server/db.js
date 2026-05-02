@@ -79,6 +79,34 @@ function initDatabase() {
     
     console.log(`✅ Created admin user: ${adminUsername}`);
   }
+
+  // Create default guest account for tutorial visitors
+  const guestUsername = 'guest';
+  const guestPassword = 'guest';
+  
+  const existingGuest = db.prepare('SELECT id FROM users WHERE username = ?').get(guestUsername);
+  
+  if (!existingGuest) {
+    const passwordHash = bcrypt.hashSync(guestPassword, 10);
+    db.prepare('INSERT INTO users (username, password_hash) VALUES (?, ?)').run(guestUsername, passwordHash);
+    
+    // Create demo lists for guest
+    const userId = db.prepare('SELECT id FROM users WHERE username = ?').get(guestUsername).id;
+    db.prepare('INSERT INTO lists (name, icon, user_id, sort_order) VALUES (?, ?, ?, ?)').run('📚 教學範例', 'BookOpen', userId, 0);
+    db.prepare('INSERT INTO lists (name, icon, user_id, sort_order) VALUES (?, ?, ?, ?)').run('🎯 試試看', 'Target', userId, 1);
+    db.prepare('INSERT INTO lists (name, icon, user_id, sort_order) VALUES (?, ?, ?, ?)').run('💡 我的想法', 'Lightbulb', userId, 2);
+    
+    // Create demo tasks for guest
+    const list1 = db.prepare('SELECT id FROM lists WHERE user_id = ? AND sort_order = 0').get(userId).id;
+    const list2 = db.prepare('SELECT id FROM lists WHERE user_id = ? AND sort_order = 1').get(userId).id;
+    
+    db.prepare('INSERT INTO tasks (list_id, title, description, priority, sort_order) VALUES (?, ?, ?, ?, ?)').run(list1, '歡迎來到 MyTODO！', '這是一個由 AI 輔助開發的待辦事項應用教學專案', 1, 0);
+    db.prepare('INSERT INTO tasks (list_id, title, description, priority, sort_order) VALUES (?, ?, ?, ?, ?)').run(list1, '試著拖拽這個任務', '你可以拖拽任務來重新排序', 2, 1);
+    db.prepare('INSERT INTO tasks (list_id, title, description, priority, sort_order) VALUES (?, ?, ?, ?, ?)').run(list2, '點擊我來編輯', '試試修改標題或加上描述', 2, 0);
+    db.prepare('INSERT INTO tasks (list_id, title, description, priority, completed, sort_order) VALUES (?, ?, ?, ?, ?, ?)').run(list2, '已完成的任務', '勾選就能完成任務！', 3, 1, 1);
+    
+    console.log(`✅ Created guest user: ${guestUsername}`);
+  }
 }
 
 module.exports = { db, initDatabase };

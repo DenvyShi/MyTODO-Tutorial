@@ -10,7 +10,9 @@
     "usernamePlaceholder": "Enter username",
     "passwordPlaceholder": "Enter password",
     "loginButton": "Login",
-    "loggingIn": "Logging in..."
+    "loggingIn": "Logging in...",
+    "demoHint": "🚀 Quick Try — Demo Account",
+    "demoNote": "Auto-filled, just click Login to explore"
   },
   "dashboard": {
     "allTasks": "All Tasks",
